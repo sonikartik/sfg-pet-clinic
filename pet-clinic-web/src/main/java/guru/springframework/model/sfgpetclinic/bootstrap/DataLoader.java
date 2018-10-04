@@ -1,6 +1,7 @@
 package guru.springframework.model.sfgpetclinic.bootstrap;
 
 import guru.springframework.model.Owner;
+import guru.springframework.model.Pet;
 import guru.springframework.model.PetType;
 import guru.springframework.model.Vet;
 import guru.springframework.model.service.OwnerService;
@@ -8,6 +9,8 @@ import guru.springframework.model.service.PetTypeService;
 import guru.springframework.model.service.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -37,16 +40,47 @@ public class DataLoader implements CommandLineRunner {
         //owner1.setId(1L);
         owner1.setFirstName("Kartik");
         owner1.setLastName("Soni");
+        owner1.setAddress("123 Brickerel");
+        owner1.setCity("Miami");
+        owner1.setTelephone("1223242322");
+
+        Pet kartiksPet = new Pet();
+        kartiksPet.setPetType(dog);
+        kartiksPet.setOwner(owner1);
+        kartiksPet.setBirthDate(LocalDate.now());
+        kartiksPet.setName("Rosco");
+        owner1.getPets().add(kartiksPet);
 
         Owner owner2 = new Owner();
         //owner2.setId(2L);
         owner2.setFirstName("Poonam");
         owner2.setLastName("Soni");
+        owner2.setAddress("360 Gran Via");
+        owner2.setCity("Irving");
+        owner2.setTelephone("12445323523");
+        Pet poonamsPet = new Pet();
+        poonamsPet.setPetType(cat);
+        poonamsPet.setOwner(owner2);
+        poonamsPet.setBirthDate(LocalDate.now());
+        poonamsPet.setName("Mini");
+        owner2.getPets().add(poonamsPet);
+
 
         Owner owner3 = new Owner();
         //owner3.setId(3L);
         owner3.setFirstName("Vrishika");
         owner3.setLastName("Soni");
+        owner3.setAddress("360 Gran Via");
+        owner3.setCity("Irving");
+        owner3.setTelephone("12445323523");
+
+        Pet vrishisPet = new Pet();
+        vrishisPet.setPetType(dog);
+        vrishisPet.setOwner(owner3);
+        vrishisPet.setBirthDate(LocalDate.now());
+        vrishisPet.setName("Michale");
+        owner3.getPets().add(vrishisPet);
+
         ownerService.save(owner1);
         ownerService.save(owner2);
         ownerService.save(owner3);
