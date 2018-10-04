@@ -1,11 +1,9 @@
 package guru.springframework.model.sfgpetclinic.bootstrap;
 
-import guru.springframework.model.Owner;
-import guru.springframework.model.Pet;
-import guru.springframework.model.PetType;
-import guru.springframework.model.Vet;
+import guru.springframework.model.*;
 import guru.springframework.model.service.OwnerService;
 import guru.springframework.model.service.PetTypeService;
+import guru.springframework.model.service.SpecialityService;
 import guru.springframework.model.service.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -17,15 +15,29 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
     private final PetTypeService petTypeService;
+    private final SpecialityService specialityService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialityService specialityService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
+        this.specialityService = specialityService;
     }
 
     @Override
     public void run(String... args) throws Exception {
+        Speciality radioligy = new Speciality();
+        radioligy.setDescription("Radiology");
+
+        Speciality surgery = new Speciality();
+        surgery.setDescription("Surgery");
+
+        Speciality dentistry = new Speciality();
+        dentistry.setDescription("Dentistry");
+        specialityService.save(radioligy);
+        specialityService.save(surgery);
+        specialityService.save(dentistry);
+
         PetType dog = new PetType();
         dog.setName("dog");
         PetType saveDogPetType = (PetType) petTypeService.save(dog);
@@ -90,10 +102,12 @@ public class DataLoader implements CommandLineRunner {
         //v1.setId(1L);
         v1.setFirstName("Sam");
         v1.setLastName("Sangal");
+        v1.getSpecialities().add(radioligy);
 
         //v2.setId(2L);
         v2.setFirstName("Sangal");
         v2.setLastName("Sam");
+        v2.getSpecialities().add(dentistry);
 
         vetService.save(v1);
         vetService.save(v2);
