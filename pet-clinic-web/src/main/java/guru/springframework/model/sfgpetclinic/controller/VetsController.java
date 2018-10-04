@@ -1,6 +1,6 @@
 package guru.springframework.model.sfgpetclinic.controller;
 
-import guru.springframework.model.guru.springframework.service.VetService;
+import guru.springframework.model.service.VetService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,7 +1,7 @@
-package guru.springframework.model.guru.springframework.service.map;
+package guru.springframework.model.service.map;
 
 import guru.springframework.model.Owner;
-import guru.springframework.model.guru.springframework.service.OwnerService;
+import guru.springframework.model.service.OwnerService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;

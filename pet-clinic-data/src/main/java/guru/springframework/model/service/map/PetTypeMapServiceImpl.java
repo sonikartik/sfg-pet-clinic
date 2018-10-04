@@ -1,13 +1,14 @@
-package guru.springframework.model.guru.springframework.service.map;
+package guru.springframework.model.service.map;
 
 import guru.springframework.model.PetType;
-import guru.springframework.model.guru.springframework.service.CrudService;
+import guru.springframework.model.service.CrudService;
+import guru.springframework.model.service.PetTypeService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class PetTypeMapServiceImpl extends AbstractMapService<PetType, Long> implements CrudService<PetType, Long> {
+public class PetTypeMapServiceImpl extends AbstractMapService<PetType, Long> implements PetTypeService<PetType, Long> {
 
     @Override
     public Set<PetType> findAll() {
