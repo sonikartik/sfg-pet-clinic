@@ -20,7 +20,7 @@ public class VetServiceMapImpl extends AbstractMapService<Vet, Long> implements 
 
     @Override
     public void delete(Vet t) {
-       super.delete(t);
+        super.delete(t);
     }
 
     @Override
