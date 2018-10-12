@@ -1,7 +1,11 @@
 package guru.springframework.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "pets ")
 public class Pet extends BaseEntity {
     private String name;
     private PetType petType;
