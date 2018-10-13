@@ -1,8 +1,7 @@
 package guru.springframework.model.service.map;
 
-import guru.springframework.model.PetType;
-import guru.springframework.model.service.CrudService;
-import guru.springframework.model.service.PetTypeService;
+import guru.springframework.model.Speciality;
+import guru.springframework.model.service.SpecialityService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
@@ -10,25 +9,24 @@ import java.util.Set;
 
 @Service
 @Profile({"default", "map"})
-public class PetTypeMapServiceImpl extends AbstractMapService<PetType, Long> implements PetTypeService {
-
+public class SpecialityMapServiceImpl extends AbstractMapService<Speciality, Long> implements SpecialityService {
     @Override
-    public Set<PetType> findAll() {
+    public Set<Speciality> findAll() {
         return super.findAll();
     }
 
     @Override
-    public PetType findById(Long id) {
+    public Speciality findById(Long id) {
         return super.findById(id);
     }
 
     @Override
-    public PetType save(PetType object) {
+    public Speciality save(Speciality object) {
         return super.save(object);
     }
 
     @Override
-    public void delete(PetType object) {
+    public void delete(Speciality object) {
         super.delete(object);
     }
 

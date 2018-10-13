@@ -1,7 +1,7 @@
 package guru.springframework.model.service.springjpaimpl;
 
 import guru.springframework.model.PetType;
-import guru.springframework.model.service.CrudService;
+import guru.springframework.model.service.PetTypeService;
 import guru.springframework.repository.PetTypeRepository;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
@@ -11,7 +11,7 @@ import java.util.Set;
 
 @Service
 @Profile("springdatajpa")
-public class PetTypeServiceImpl implements CrudService<PetType, Long> {
+public class PetTypeServiceImpl implements PetTypeService {
     private PetTypeRepository petTypeRepository;
 
     public PetTypeServiceImpl(PetTypeRepository petTypeRepository) {
