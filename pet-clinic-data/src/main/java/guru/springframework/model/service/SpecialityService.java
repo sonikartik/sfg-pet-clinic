@@ -1,4 +1,6 @@
 package guru.springframework.model.service;
 
-public interface SpecialityService<Speciality, Long> extends CrudService<Speciality, Long> {
+import guru.springframework.model.Speciality;
+
+public interface SpecialityService extends CrudService<Speciality, Long> {
 }
