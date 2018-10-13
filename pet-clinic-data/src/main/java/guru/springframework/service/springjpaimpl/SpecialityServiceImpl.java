@@ -1,7 +1,7 @@
-package guru.springframework.model.service.springjpaimpl;
+package guru.springframework.service.springjpaimpl;
 
 import guru.springframework.model.Speciality;
-import guru.springframework.model.service.SpecialityService;
+import guru.springframework.service.SpecialityService;
 import guru.springframework.repository.SpecialityRepository;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;

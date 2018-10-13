@@ -1,7 +1,7 @@
-package guru.springframework.model.service.springjpaimpl;
+package guru.springframework.service.springjpaimpl;
 
 import guru.springframework.model.Visit;
-import guru.springframework.model.service.VisitService;
+import guru.springframework.service.VisitService;
 import guru.springframework.repository.VisitRepository;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;

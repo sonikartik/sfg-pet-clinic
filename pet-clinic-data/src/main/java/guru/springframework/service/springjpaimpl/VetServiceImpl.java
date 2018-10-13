@@ -1,7 +1,7 @@
-package guru.springframework.model.service.springjpaimpl;
+package guru.springframework.service.springjpaimpl;
 
 import guru.springframework.model.Vet;
-import guru.springframework.model.service.VetService;
+import guru.springframework.service.VetService;
 import guru.springframework.repository.VetRepository;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;

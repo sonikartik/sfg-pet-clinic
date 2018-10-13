@@ -1,7 +1,7 @@
-package guru.springframework.model.service.map;
+package guru.springframework.service.map;
 
 import guru.springframework.model.Speciality;
-import guru.springframework.model.service.SpecialityService;
+import guru.springframework.service.SpecialityService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
-package guru.springframework.model.service.map;
+package guru.springframework.service.map;
 
 import guru.springframework.model.Visit;
-import guru.springframework.model.service.VisitService;
+import guru.springframework.service.VisitService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 

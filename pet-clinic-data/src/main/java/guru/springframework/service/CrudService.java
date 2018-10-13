@@ -1,4 +1,4 @@
-package guru.springframework.model.service;
+package guru.springframework.service;
 
 import java.util.Set;
 

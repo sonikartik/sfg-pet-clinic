@@ -1,11 +1,11 @@
-package guru.springframework.model.service.map;
+package guru.springframework.service.map;
 
 import guru.springframework.model.Owner;
 import guru.springframework.model.Pet;
 import guru.springframework.model.PetType;
-import guru.springframework.model.service.OwnerService;
-import guru.springframework.model.service.PetService;
-import guru.springframework.model.service.PetTypeService;
+import guru.springframework.service.OwnerService;
+import guru.springframework.service.PetService;
+import guru.springframework.service.PetTypeService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 

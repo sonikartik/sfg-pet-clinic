@@ -1,4 +1,4 @@
-package guru.springframework.model.service;
+package guru.springframework.service;
 
 import guru.springframework.model.Pet;
 

@@ -1,7 +1,7 @@
-package guru.springframework.model.service.springjpaimpl;
+package guru.springframework.service.springjpaimpl;
 
 import guru.springframework.model.Owner;
-import guru.springframework.model.service.OwnerService;
+import guru.springframework.service.OwnerService;
 import guru.springframework.repository.OwnerRepository;
 import guru.springframework.repository.PetRepository;
 import guru.springframework.repository.PetTypeRepository;
