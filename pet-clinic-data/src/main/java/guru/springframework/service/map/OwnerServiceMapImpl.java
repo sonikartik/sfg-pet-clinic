@@ -63,11 +63,11 @@ public class OwnerServiceMapImpl extends AbstractMapService<Owner, Long> impleme
 
     @Override
     public Owner findById(Long id) {
-        return this.findById(id);
+        return super.findById(id);
     }
 
     @Override
     public Owner findByLastName(String lastName) {
-        return null;
+        return this.findAll().stream().filter(owner -> owner.getLastName().equals(lastName)).findFirst().orElse(null);
     }
 }
